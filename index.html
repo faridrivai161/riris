@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Box dengan Foto, Musik Spotify, dan Background Video</title>
+<style>
+    /* Styling untuk tampilan seluruh halaman */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        overflow: hidden;
+        font-family: Arial, sans-serif;
+        color: #fff;
+    }
+
+    /* Styling untuk background video */
+    .background-video {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: -1;
+    }
+
+    /* Styling untuk box */
+    .box {
+        width: 300px;
+        padding: 20px;
+        text-align: center;
+        background: rgba(0, 0, 0, 0.6);
+        border-radius: 15px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        animation: pulse 2s infinite;
+        transition: transform 0.2s;
+    }
+
+    /* Animasi box membesar dan mengecil */
+    @keyframes pulse {
+        0%, 100% {
+            transform: scale(1);
+        }
+        50% {
+            transform: scale(1.05);
+        }
+    }
+
+    /* Styling untuk foto */
+    .box img {
+        width: 100%;
+        border-radius: 10px;
+        margin-bottom: 15px;
+    }
+
+    /* Styling untuk iframe Spotify */
+    .box iframe {
+        width: 100%;
+        height: 80px;
+        border-radius: 10px;
+        border: none;
+        margin-top: 10px;
+    }
+
+</style>
+</head>
+<body>
+
+<!-- Background Video -->
+<video class="background-video" autoplay muted loop>
+    <source src="WhatsApp Video 2024-11-03 at 14.20.00_ef668c7c.mp4" type="video/mp4">
+    Browser Anda tidak mendukung video background.
+</video>
+
+<!-- Box di tengah halaman -->
+<div class="box">
+    <img src="Untitled-1.png" alt="Foto">
+    <h3>pacar</h3>
+    <p>jangan mengangap diri kamu tidak cantik,kamu meremehkan seleraku?</p>
+    
+    <!-- Embed Spotify -->
+    <iframe src="https://open.spotify.com/embed/track/4oHQ8n9OKQ3599e8noCrDX?utm_source=generator" 
+            width="300" height="80" 
+            frameborder="0" 
+            allowtransparency="true" 
+            allow="encrypted-media"></iframe>
+</div>
+
+</body>
+</html>
